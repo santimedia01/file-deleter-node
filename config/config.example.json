@@ -1,0 +1,6 @@
+{
+    "paths": {
+        "filesToDeleteFolder": "D:/00Santi/file-deleter-node/temp/to-delete",
+        "folderToSearchAndDelete": "D:/00Santi/file-deleter-node/temp/to-search"
+    }
+}

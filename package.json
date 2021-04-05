@@ -1,0 +1,27 @@
+{
+  "name": "file-deleter-node",
+  "version": "1.0.0",
+  "description": "File Deleter",
+  "main": "index.js",
+  "bin": "bin.js", 
+  "scripts": {
+    "app": "node bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santimedia01/file-deleter-node.git"
+  },
+  "keywords": [
+    "file",
+    "deleter"
+  ],
+  "author": "Santi Media",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santimedia01/file-deleter-node/issues"
+  },
+  "homepage": "https://github.com/santimedia01/file-deleter-node#readme",
+  "dependencies": {
+    "simple-node-logger": "^18.12.24"
+  }
+}
