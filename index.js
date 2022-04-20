@@ -1,14 +1,13 @@
 function main() {
     const fs = require('fs');
     const path = require('path');
-
+    const now = new Date();
     // https://www.npmjs.com/package/simple-node-logger
     const SimpleNodeLogger = require('simple-node-logger'),
-        logOptions = {
-            logFilePath:'./logs/filesFoundAndDeleted.log',
+        Logger = SimpleNodeLogger.createSimpleLogger({
+            logFilePath: `./logs/filesFoundAndDeleted - ${now.getDay()}_${now.getMonth()+1}_${now.getFullYear()}.log`,
             timestampFormat:'YYYY-MM-DD HH:mm:ss.SSS'
-        },
-        Logger = SimpleNodeLogger.createSimpleLogger( logOptions );
+        });
     
     const FilesLib = require('./lib/files.js');
 
@@ -31,8 +30,6 @@ function main() {
     Logger.info('\nConfig(files to search): "', config.paths.filesToDelete + '"',
                 '\nConfig(files to search an delete): "', config.paths.toSearchAndDelete + '"',
                 //'\nConfig(files to check content too): "', config.paths.folderWithFilesToCheckContentToo + '"',
-                '\n\nFiles found to search: ', filesToSearch, 
-                '\n\nAll files found for search and delete:', allFiles, 
                 '\n\nAll files deleted: ', filesToDelete,
                 '\n\n\n');
 }    
